@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import Hamburger from './Hamburger';
-import { Nav, Links, Link, ExternalLink } from './styles';
+import { Nav, Links, Link, ExternalLink, Button } from './styles';
 import { useScrollData } from 'scroll-data-hook';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-
+import Resume from '../../assets/files/Resume.pdf';
 import {
     faBriefcase,
     faHome,
@@ -80,6 +80,9 @@ const Header = () => {
                         color={theme.colors.white.primary}
                     />
                 </ExternalLink>
+                <Button href={Resume} target="_blank">
+                    Resume
+                </Button>
             </Links>
         </Nav>
     );

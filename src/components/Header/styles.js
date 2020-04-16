@@ -84,6 +84,25 @@ export const NavBrand = styled.div`
     }
 `;
 
+export const Button = styled.a`
+    text-decoration: none;
+    font-size: 14px;
+    padding: 0.5rem 0.75rem;
+    border-radius: 3px;
+    border: 1px solid ${theme.colors.teal};
+    color: ${theme.colors.teal};
+    cursor: pointer;
+    margin-left: 0.5rem;
+
+    &:hover {
+        background-color: rgba(100, 255, 218, 0.07);
+    }
+
+    @media (max-width: 767px) {
+        margin: 1rem 0;
+    }
+`;
+
 export const Link = styled(NavLink)`
     font-size: 14px;
     padding: 8px 16px;
