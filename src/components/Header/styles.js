@@ -6,14 +6,20 @@ import { Button as Box } from '@styles';
 export const Nav = styled.header`
     background: ${theme.colors.darkBlue};
     box-shadow: ${props =>
-        props.scrollDirection === 'up' ? theme.boxShadow : 'none'};
+        props.scrollDirection === 'up' && props.position.y !== 0
+            ? theme.boxShadow
+            : 'none'};
     position: fixed;
     top: 0;
     transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
     transform: translateY(
         ${props => (props.scrollDirection === 'down' ? `-70px` : '0px')}
     );
-    height: ${props => (props.scrollDirection === 'none' ? '100px' : '70px')};
+    height: ${props =>
+        props.scrollDirection === 'none' ||
+        (props.scrollDirection === 'up' && props.position.y === 0)
+            ? '100px'
+            : '70px'};
     display: flex;
     justify-content: space-between;
     width: 100%;

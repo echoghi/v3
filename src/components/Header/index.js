@@ -14,7 +14,7 @@ import { useEffect } from 'react';
 import Brand from './Brand';
 
 const Header = () => {
-    const { direction } = useScrollData();
+    const { direction, position } = useScrollData();
     const [open, handleMenu] = useState(false);
     const [scrollDirection, setScrollDirection] = useState('none');
     const closeMenu = () => handleMenu(false);
@@ -29,7 +29,7 @@ const Header = () => {
     }, [direction]);
 
     return (
-        <Nav scrollDirection={scrollDirection}>
+        <Nav scrollDirection={scrollDirection} position={position}>
             <Brand />
             <Hamburger open={open} onClick={toggleMenu} />
             <Links open={open} role="menu">

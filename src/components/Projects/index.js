@@ -11,19 +11,21 @@ import {
 } from './styles';
 import { Section, SectionTitle } from '@styles';
 import Doughboy from '@images/doughboy.png';
+import Corona from '@images/corona.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import theme from '@theme';
 import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
 
-const Project = ({ name, description, img, tech, url, github }) => {
+const Project = ({ name, description, img, tech, url, github, index }) => {
+    console.log(index);
     return (
         <Container>
-            <ProjectImage src={img} />
-            <Description>
+            <ProjectImage src={img} left={!!index} />
+            <Description right={!!index}>
                 <Featured>Featured Project</Featured>
                 <Name>{name}</Name>
                 <Text>{description}</Text>
-                <TechList>
+                <TechList right={!!index}>
                     {tech.map(str => (
                         <li key={str}>{str}</li>
                     ))}
@@ -36,7 +38,11 @@ const Project = ({ name, description, img, tech, url, github }) => {
                             color={theme.colors.white}
                         />
                     </a> */}
-                    <a href={url}>
+                    <a
+                        href={url}
+                        target="_blank"
+                        rel="nofollow noopener noreferrer"
+                    >
                         <FontAwesomeIcon
                             icon={faExternalLinkAlt}
                             size="lg"
@@ -61,9 +67,9 @@ const projects = [
     },
     {
         name: 'Covid-19 Dashboard',
-        img: Doughboy,
+        img: Corona,
         tech: ['Netlify', 'Gatsby', 'React'],
-        url: 'https://doughboy.io/',
+        url: 'https://mycovid19tracker.netlify.app/',
         github: 'https://github.com/echoghi/corona',
         description:
             'A simple Covid-19 tracker built with  React, Gatsby, and Leaflet.'
@@ -74,8 +80,8 @@ const Projects = () => {
     return (
         <Section id="projects">
             <SectionTitle>Some Things I've Built</SectionTitle>
-            {projects.map(project => {
-                return <Project {...project} key={project.name} />;
+            {projects.map((project, index) => {
+                return <Project {...project} index={index} />;
             })}
         </Section>
     );
