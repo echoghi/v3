@@ -1,4 +1,5 @@
 const config = require('./config/website');
+const theme = require('./config/theme');
 
 module.exports = {
     siteMetadata: {
@@ -11,35 +12,42 @@ module.exports = {
         image: config.siteLogo,
         author: {
             name: config.author,
-            minibio: config.minibio,
+            minibio: config.minibio
         },
         organization: {
             name: config.organization,
             url: config.siteUrl,
-            logo: config.siteLogo,
+            logo: config.siteLogo
         },
         social: {
             twitter: config.twitterHandle,
-            fbAppID: '',
-        },
+            fbAppID: ''
+        }
     },
+
     plugins: [
         `gatsby-plugin-react-helmet`,
         'gatsby-plugin-styled-components',
         'gatsby-plugin-offline',
         {
+            resolve: `gatsby-plugin-google-analytics`,
+            options: {
+                trackingId: config.googleAnalyticsID
+            }
+        },
+        {
             resolve: `gatsby-plugin-google-fonts`,
             options: {
-                fonts: [`source sans pro`],
-                display: 'swap',
-            },
+                fonts: [`Oxygen Mono`],
+                display: 'swap'
+            }
         },
         {
             resolve: `gatsby-source-filesystem`,
             options: {
                 name: `images`,
-                path: `${__dirname}/src/images`,
-            },
+                path: `${__dirname}/src/images`
+            }
         },
         `gatsby-transformer-sharp`,
         `gatsby-plugin-sharp`,
@@ -49,11 +57,11 @@ module.exports = {
                 name: config.siteTitle,
                 short_name: config.siteTitle,
                 start_url: `/`,
-                background_color: `#663399`,
-                theme_color: `#663399`,
-                display: `standalone`,
-                icon: 'src/images/favicon.png',
-            },
-        },
-    ],
+                background_color: theme.colors.darkBlue,
+                theme_color: theme.colors.darkBlue,
+                display: 'minimal-ui',
+                icon: 'src/images/favicon.png'
+            }
+        }
+    ]
 };

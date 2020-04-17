@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { Link as NavLink } from 'gatsby';
-import theme from '../../../config/theme';
+import theme from '@theme';
 
 export const Nav = styled.header`
     background: ${theme.colors.darkBlue};
@@ -85,13 +85,19 @@ export const NavBrand = styled.div`
 `;
 
 export const Button = styled.a`
-    text-decoration: none;
     font-size: 14px;
-    padding: 0.5rem 0.75rem;
-    border-radius: 3px;
+    padding: 0.75rem 1rem;
+    margin: 1rem 0;
+    font-family: ${theme.fonts.primary};
     border: 1px solid ${theme.colors.teal};
     color: ${theme.colors.teal};
     cursor: pointer;
+    background-color: transparent;
+    line-height: 1;
+    border-image: initial;
+    border-radius: 3px;
+    text-decoration: none;
+    transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
     margin-left: 0.5rem;
 
     &:hover {
@@ -99,7 +105,11 @@ export const Button = styled.a`
     }
 
     @media (max-width: 767px) {
-        margin: 1rem 0;
+        margin: 2rem auto;
+        display: flex;
+        position: relative;
+        width: 85%;
+        width: fit-content;
     }
 `;
 
@@ -116,7 +126,9 @@ export const Link = styled(NavLink)`
     user-select: none;
     outline: none;
     line-height: 1;
-    color: ${theme.colors.white};
+    color: ${props =>
+        !!props.active ? theme.colors.teal : theme.colors.white};
+    font-family: ${theme.fonts.primary};
 
     span {
         text-transform: none;
@@ -214,11 +226,8 @@ export const Links = styled.ul`
         box-shadow: -2px 2px 5px rgba(0, 0, 0, 0.1);
         background: ${theme.colors.lightBlue};
         text-align: center;
-        transform: ${props => (props.open ? 'scaleX(1)' : 'scaleX(0)')};
-        transition: ${props =>
-            props.open
-                ? 'transform 0.3s cubic-bezier(0.01, 0.03, 0.29, 1.17), opacity 0.2s'
-                : 'transform 0.1s cubic-bezier(0.71, 0.02, 0.9, 0.23), opacity 0.1s'};
+        transform: translateX(${props => (props.open ? '0px' : '76vw')});
+        transition: transform 0.2s ease;
         transform-origin: right;
     }
 `;

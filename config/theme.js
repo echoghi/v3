@@ -1,4 +1,4 @@
-const theme = {
+module.exports = {
     boxShadow: 'rgba(2, 12, 27, 0.7) 0px 10px 30px -10px',
     colors: {
         darkBlue: '#0A192E',
@@ -12,14 +12,12 @@ const theme = {
         hoverGreyAlt: 'rgb(242, 242, 242)',
         white: 'rgb(204, 214, 246)',
         whiter: '#CCD6F6',
-        teal: 'rgb(100, 255, 218)',
+        teal: 'rgb(100, 255, 218)'
     },
     fontSizes: {
-        normal: '14px',
+        normal: '14px'
     },
     fonts: {
-        primary: 'Source Sans Pro, sans-serif, serif',
-    },
+        primary: 'Oxygen Mono, sans-serif, serif'
+    }
 };
-
-export default theme;

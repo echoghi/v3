@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
 import Hamburger from './Hamburger';
-import { Nav, Links, Link, ExternalLink, Button } from './styles';
+import { Nav, Links, Link, Button } from './styles';
 import { useScrollData } from 'scroll-data-hook';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Resume from '../../assets/files/Resume.pdf';
 import {
     faBriefcase,
     faHome,
-    faIdBadge,
+    faIdBadge
 } from '@fortawesome/free-solid-svg-icons';
-import theme from '../../../config/theme';
+import theme from '@theme';
 import { useEffect } from 'react';
 import Brand from './Brand';
 
@@ -22,9 +22,9 @@ const Header = () => {
 
     const handleActivePath = path => {
         if (window.location.pathname === path) {
-            return 'active';
+            return 'true';
         } else {
-            return null;
+            return '';
         }
     };
 
@@ -43,43 +43,44 @@ const Header = () => {
                     onClick={closeMenu}
                     to="/#about"
                     exact="true"
-                    className={handleActivePath('/#about')}
+                    active={handleActivePath('/#about')}
                     role="menuitem"
                 >
                     About{' '}
                     <FontAwesomeIcon
                         icon={faHome}
                         size="lg"
-                        color={theme.colors.white.primary}
+                        color={theme.colors.white}
                     />
                 </Link>
 
                 <Link
                     onClick={closeMenu}
                     to="/#projects"
-                    className={handleActivePath('/#projects')}
+                    active={handleActivePath('/#projects')}
                     role="menuitem"
                 >
                     Projects{' '}
                     <FontAwesomeIcon
                         icon={faBriefcase}
                         size="lg"
-                        color={theme.colors.white.primary}
+                        color={theme.colors.white}
                     />
                 </Link>
 
-                <ExternalLink
+                <Link
                     onClick={closeMenu}
-                    href="/#contact"
+                    active={handleActivePath('/#contact')}
+                    to="/#contact"
                     role="menuitem"
                 >
                     Contact{' '}
                     <FontAwesomeIcon
                         icon={faIdBadge}
                         size="lg"
-                        color={theme.colors.white.primary}
+                        color={theme.colors.white}
                     />
-                </ExternalLink>
+                </Link>
                 <Button href={Resume} target="_blank">
                     Resume
                 </Button>

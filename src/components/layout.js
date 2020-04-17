@@ -14,6 +14,7 @@ import './layout.css';
 
 import styled, { createGlobalStyle } from 'styled-components';
 import theme from '../../config/theme';
+import Footer from './Footer';
 
 const Container = styled.div`
     margin: 0 auto;
@@ -29,6 +30,12 @@ const GlobalStyle = createGlobalStyle`
         background: ${theme.colors.darkBlue};
     }
 `;
+
+// load smooth scroll
+if (typeof window !== 'undefined') {
+    // eslint-disable-next-line global-require
+    require('smooth-scroll')('a[href*="#"]');
+}
 
 const Layout = ({ children }) => {
     const data = useStaticQuery(graphql`
@@ -47,18 +54,14 @@ const Layout = ({ children }) => {
             <Header siteTitle={data.site.siteMetadata.title} />
             <Container>
                 <main>{children}</main>
-                <footer>
-                    © {new Date().getFullYear()}, Built with
-                    {` `}
-                    <a href="https://www.gatsbyjs.org">Gatsby</a>
-                </footer>
             </Container>
+            <Footer />
         </>
     );
 };
 
 Layout.propTypes = {
-    children: PropTypes.node.isRequired,
+    children: PropTypes.node.isRequired
 };
 
 export default Layout;
