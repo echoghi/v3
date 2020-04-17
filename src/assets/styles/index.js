@@ -17,6 +17,7 @@ export const Section = styled.section`
 
 export const SectionTitle = styled.h1`
     margin-bottom: 3rem;
+    font-size: 28px;
     font-family: ${theme.fonts.primary};
     color: ${theme.colors.white};
 `;

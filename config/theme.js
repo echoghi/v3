@@ -18,6 +18,6 @@ module.exports = {
         normal: '14px'
     },
     fonts: {
-        primary: 'Oxygen Mono, sans-serif, serif'
+        primary: 'Josefin Sans, sans-serif, serif'
     }
 };

@@ -9,6 +9,10 @@ export const Project = styled.div`
     align-items: center;
     margin-bottom: 120px;
     gap: 10px;
+
+    @media (max-width: 767px) {
+        display: block;
+    }
 `;
 
 export const Button = styled(Box)`
@@ -26,7 +30,7 @@ export const ProjectImage = styled.img`
 
     @media (max-width: 767px) {
         grid-column: 1 / -1;
-        opacity: 0.35;
+
         background-color: ${theme.colors.teal};
     }
 `;
@@ -38,6 +42,8 @@ export const Description = styled.div`
     grid-row: 1 / -1;
 
     @media (max-width: 767px) {
+        grid-column: 1 / 7;
+        text-align: left;
         grid-column: 1 / -1;
     }
 `;
@@ -56,6 +62,14 @@ export const TechList = styled.ul`
             padding-left: 0;
         }
     }
+
+    @media (max-width: 767px) {
+        justify-content: flex-start;
+        margin: 0;
+        li {
+            padding: 0 0.5rem;
+        }
+    }
 `;
 
 export const Icons = styled.div`
@@ -64,11 +78,16 @@ export const Icons = styled.div`
 
 export const Name = styled.h5`
     font-size: 28px;
-    font-family: Oxygen Mono;
+    font-family: ${theme.fonts.primary};
+
+    @media (max-width: 767px) {
+        font-size: 22px;
+        margin-bottom: 0;
+    }
 `;
 
 export const Featured = styled.h4`
-    font-family: Oxygen Mono;
+    font-family: ${theme.fonts.primary};
     font-size: 13px;
     color: ${theme.colors.teal};
     margin-bottom: 0.5rem;
@@ -88,5 +107,6 @@ export const Text = styled.p`
 
     @media (max-width: 767px) {
         background-color: transparent;
+        padding: 5px 0;
     }
 `;

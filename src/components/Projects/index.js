@@ -79,7 +79,7 @@ const projects = [
 const Projects = () => {
     return (
         <Section id="projects">
-            <SectionTitle>Some Things I've Built</SectionTitle>
+            <SectionTitle>02. Some Things I've Built</SectionTitle>
             {projects.map((project, index) => {
                 return <Project {...project} index={index} />;
             })}

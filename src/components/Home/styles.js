@@ -11,12 +11,14 @@ export const Button = styled(Box)`
 `;
 
 export const OverLine = styled.h1`
+    font-family: ${theme.fonts.primary};
     color: ${theme.colors.teal};
     font-size: 1rem;
     margin-bottom: 1rem;
 `;
 
 export const Title = styled.h2`
+    font-family: ${theme.fonts.primary};
     color: ${theme.colors.whiter};
     font-size: 5rem;
 
