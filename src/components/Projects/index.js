@@ -57,7 +57,16 @@ const projects = [
         url: 'https://doughboy.io/',
         github: 'https://github.com/echoghi/doughboy',
         description:
-            'A nicer look at your GitHub profile and repo stats. Includes data visualizations of your top languages, starred repositories, and sort through your top repos by number of stars, forks, and size.'
+            'A nutrition tracker PWA built with TypeScript, React, and Firebase.'
+    },
+    {
+        name: 'Covid-19 Dashboard',
+        img: Doughboy,
+        tech: ['Netlify', 'Gatsby', 'React'],
+        url: 'https://doughboy.io/',
+        github: 'https://github.com/echoghi/corona',
+        description:
+            'A simple Covid-19 tracker built with  React, Gatsby, and Leaflet.'
     }
 ];
 

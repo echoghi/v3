@@ -20,13 +20,7 @@ const Header = () => {
     const closeMenu = () => handleMenu(false);
     const toggleMenu = () => handleMenu(!open);
 
-    const handleActivePath = path => {
-        if (window.location.pathname === path) {
-            return 'true';
-        } else {
-            return '';
-        }
-    };
+    const handleActivePath = path => {};
 
     useEffect(() => {
         if (direction.y) {
