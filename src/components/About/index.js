@@ -35,8 +35,8 @@ const About = () => {
                 <Description>
                     <Text>
                         I'm Emile, a software engineer living in San Francisco,
-                        CA and working remotely where I build and maintain web
-                        applications built primarily with React.
+                        CA where I build and maintain web applications built
+                        primarily with React.
                     </Text>
 
                     <Text>

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import theme from '../../../config/theme';
+import theme from '@theme';
 import { faCannabis } from '@fortawesome/free-solid-svg-icons';
 import { NavBrand } from './styles';
 

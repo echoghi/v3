@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { Link as NavLink } from 'gatsby';
 import theme from '@theme';
+import { Button as Box } from '@styles';
 
 export const Nav = styled.header`
     background: ${theme.colors.darkBlue};
@@ -84,25 +85,10 @@ export const NavBrand = styled.div`
     }
 `;
 
-export const Button = styled.a`
-    font-size: 14px;
+export const Button = styled(Box)`
     padding: 0.75rem 1rem;
     margin: 1rem 0;
-    font-family: ${theme.fonts.primary};
-    border: 1px solid ${theme.colors.teal};
-    color: ${theme.colors.teal};
-    cursor: pointer;
-    background-color: transparent;
-    line-height: 1;
-    border-image: initial;
-    border-radius: 3px;
-    text-decoration: none;
-    transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
     margin-left: 0.5rem;
-
-    &:hover {
-        background-color: rgba(100, 255, 218, 0.07);
-    }
 
     @media (max-width: 767px) {
         margin: 2rem auto;

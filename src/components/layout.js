@@ -24,10 +24,11 @@ const Container = styled.div`
 
 const GlobalStyle = createGlobalStyle`
     html, body {
-        font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-        'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
-        'Open Sans', 'Helvetica Neue', sans-serif;
+        font-family:  -apple-system, BlinkMacSystemFont,
+        Oxygen Mono, Roboto, Oxygen, Ubuntu, Cantarell,
+        Open Sans, 'Helvetica Neue', sans-serif;
         background: ${theme.colors.darkBlue};
+        box-sizing: border-box;
     }
 `;
 
