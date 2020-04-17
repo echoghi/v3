@@ -13,7 +13,7 @@ export const Button = styled(Box)`
 export const OverLine = styled.h1`
     font-family: ${theme.fonts.primary};
     color: ${theme.colors.teal};
-    font-size: 1rem;
+    font-size: 1.2rem;
     margin-bottom: 1rem;
 `;
 
@@ -38,7 +38,7 @@ export const TagLine = styled.h3`
 
 export const Description = styled.p`
     color: ${theme.colors.white};
-    font-size: 1rem;
+    font-size: 1.3rem;
     line-height: 1.3;
     width: 50%;
 

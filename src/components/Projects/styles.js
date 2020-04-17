@@ -100,7 +100,7 @@ export const Text = styled.p`
     color: #a8b2d1;
     background-color: rgb(23, 42, 69);
     color: rgb(168, 178, 209);
-    font-size: 1rem;
+    font-size: 1.2rem;
     transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
     padding: 25px;
     border-radius: 3px;

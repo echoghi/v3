@@ -6,8 +6,12 @@ import { Section } from '@styles';
 export const Container = styled(Section)``;
 
 export const Text = styled.p`
-    font-size: 1rem;
+    font-size: 1.3rem;
     line-height: 1.2;
+
+    @media (max-width: 1023px) {
+        font-size: 1.2rem;
+    }
 `;
 
 export const Img = styled.img`

@@ -7,7 +7,7 @@ export const Container = styled(Section)`
 `;
 
 export const Text = styled.p`
-    font-size: 1rem;
+    font-size: 1.3rem;
     color: ${theme.colors.white};
     width: 30rem;
     margin: 3rem auto;
@@ -15,6 +15,7 @@ export const Text = styled.p`
 
     @media (max-width: 767px) {
         width: 100%;
+        font-size: 1.1rem;
     }
 `;
 
