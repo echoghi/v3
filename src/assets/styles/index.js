@@ -16,10 +16,36 @@ export const Section = styled.section`
 `;
 
 export const SectionTitle = styled.h1`
-    margin-bottom: 3rem;
-    font-size: 28px;
+    margin-bottom: 5rem;
+    display: flex;
+    align-items: center;
+    font-size: 32px;
     font-family: ${theme.fonts.primary};
     color: ${theme.colors.white};
+    width: 100%;
+
+    &:after {
+        content: '';
+        display: block;
+        height: 1px;
+        width: 300px;
+        background-color: rgb(45, 57, 82);
+        position: relative;
+        margin-left: 20px;
+
+        @media (max-width: 767px) {
+            width: 150px;
+        }
+    }
+
+    @media (max-width: 767px) {
+        font-size: 20px;
+    }
+`;
+
+export const SectionNumber = styled.div`
+    color: ${theme.colors.teal};
+    margin-right: 0.75rem;
 `;
 
 export const Button = styled.a`

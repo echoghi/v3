@@ -15,9 +15,9 @@ import Corona from '@images/corona.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import theme from '@theme';
 import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
+import { SectionNumber } from '../../assets/styles';
 
 const Project = ({ name, description, img, tech, url, github, index }) => {
-    console.log(index);
     return (
         <Container>
             <ProjectImage src={img} left={!!index} />
@@ -79,7 +79,9 @@ const projects = [
 const Projects = () => {
     return (
         <Section id="projects">
-            <SectionTitle>02. Some Things I've Built</SectionTitle>
+            <SectionTitle>
+                <SectionNumber>02. </SectionNumber>Some Things I've Built
+            </SectionTitle>
             {projects.map((project, index) => {
                 return <Project {...project} index={index} />;
             })}

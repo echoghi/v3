@@ -13,7 +13,7 @@ import config from '@config';
 import theme from '@theme';
 import { faCaretRight } from '@fortawesome/free-solid-svg-icons';
 import Image from '@images/me.jpg';
-import { SectionTitle } from '@styles';
+import { SectionTitle, SectionNumber } from '@styles';
 
 const About = () => {
     const ListItems = config.stack.map(tech => {
@@ -31,7 +31,9 @@ const About = () => {
 
     return (
         <Container id="about">
-            <SectionTitle>01. About Me</SectionTitle>
+            <SectionTitle>
+                <SectionNumber>01.</SectionNumber>About Me
+            </SectionTitle>
             <Grid>
                 <Description>
                     <Text>

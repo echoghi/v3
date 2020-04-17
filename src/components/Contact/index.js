@@ -1,9 +1,13 @@
 import React from 'react';
 import { Container, Text, Heading, Button } from './styles';
+import { SectionNumber, SectionTitle } from '@styles';
 
 const Contact = () => {
     return (
         <Container id="contact">
+            <SectionTitle>
+                <SectionNumber>03. </SectionNumber> What's next?
+            </SectionTitle>
             <Heading>Get In Touch</Heading>
             <Text>
                 Although I'm not currently looking for freelance opportunities,
