@@ -11,6 +11,7 @@ const Container = styled.footer`
     padding: 1rem 0;
     text-align: center;
     color: ${theme.colors.white};
+    font-family: ${theme.fonts.primary};
     background: #020c1b;
 `;
 

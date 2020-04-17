@@ -14,6 +14,7 @@ import Doughboy from '@images/doughboy.png';
 import Corona from '@images/corona.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import theme from '@theme';
+
 import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
 import { SectionNumber } from '../../assets/styles';
 
