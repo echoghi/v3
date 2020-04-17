@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'gatsby';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import theme from '@theme';
-import { faCannabis } from '@fortawesome/free-solid-svg-icons';
+import { faCode } from '@fortawesome/free-solid-svg-icons';
 import { NavBrand } from './styles';
 
 const Brand = props => {
@@ -10,7 +10,7 @@ const Brand = props => {
         <NavBrand {...props}>
             <Link to="/#" aria-label="Navigate to Home">
                 <FontAwesomeIcon
-                    icon={faCannabis}
+                    icon={faCode}
                     size="3x"
                     color={theme.colors.white}
                 />

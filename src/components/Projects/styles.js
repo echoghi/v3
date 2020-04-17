@@ -7,7 +7,7 @@ export const Project = styled.div`
     grid-template-columns: repeat(12, 1fr);
     -webkit-box-align: center;
     align-items: center;
-    margin-bottom: 100px;
+    margin-bottom: 120px;
     gap: 10px;
 `;
 
@@ -23,7 +23,6 @@ export const ProjectImage = styled.img`
     box-shadow: rgba(2, 12, 27, 0.7) 0px 10px 30px -15px;
     position: relative;
     z-index: 1;
-    background-color: rgb(100, 255, 218);
 
     @media (max-width: 767px) {
         grid-column: 1 / -1;
