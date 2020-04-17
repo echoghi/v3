@@ -10,7 +10,7 @@ const Contact = () => {
                 my inbox is always open. Whether for a potential project or just
                 to say hi, I'll try my best to answer your email!
             </Text>
-            <Button>Say Hello</Button>
+            <Button href="mailto:emchoghi@gmail.com">Say Hello</Button>
         </Container>
     );
 };
