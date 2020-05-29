@@ -12,9 +12,10 @@ import { useStaticQuery, graphql } from 'gatsby';
 import Header from './Header';
 import './layout.css';
 
-import styled, { createGlobalStyle } from 'styled-components';
-import theme from '../../config/theme';
+import styled from 'styled-components';
 import Footer from './Footer';
+import { GlobalStyle } from '@styles';
+import { loadSmoothScroll } from '@lib';
 
 const Container = styled.div`
     margin: 0 auto;
@@ -22,21 +23,7 @@ const Container = styled.div`
     padding: 0 1.0875rem 1.45rem;
 `;
 
-const GlobalStyle = createGlobalStyle`
-    html, body {
-        font-family:  -apple-system, BlinkMacSystemFont,
-        Oxygen Mono, Roboto, Oxygen, Ubuntu, Cantarell,
-        Open Sans, 'Helvetica Neue', sans-serif;
-        background: ${theme.colors.darkBlue};
-        box-sizing: border-box;
-    }
-`;
-
-// load smooth scroll
-if (typeof window !== 'undefined') {
-    // eslint-disable-next-line global-require
-    require('smooth-scroll')('a[href*="#"]');
-}
+loadSmoothScroll();
 
 const Layout = ({ children }) => {
     const data = useStaticQuery(graphql`

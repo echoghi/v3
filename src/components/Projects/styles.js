@@ -57,10 +57,6 @@ export const TechList = styled.ul`
         font-size: 12px;
         list-style: none;
         padding: 0 1rem;
-
-        &:first-child {
-            padding-left: 0;
-        }
     }
 
     @media (max-width: 767px) {

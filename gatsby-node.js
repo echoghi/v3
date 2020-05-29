@@ -13,6 +13,7 @@ exports.onCreateWebpackConfig = ({ actions }) => {
                 '@theme': path.resolve(__dirname, 'config/theme'),
                 '@config': path.resolve(__dirname, 'config/website'),
                 '@styles': path.resolve(__dirname, 'src/assets/styles'),
+                '@lib': path.resolve(__dirname, 'src/lib'),
                 '@images': path.resolve(__dirname, 'src/images')
             }
         }
