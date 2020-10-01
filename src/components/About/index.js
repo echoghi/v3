@@ -16,7 +16,7 @@ import Image from '@images/me.jpg';
 import { SectionTitle, SectionNumber } from '@styles';
 
 const About = () => {
-    const ListItems = config.stack.map(tech => {
+    const ListItems = config.stack.map((tech) => {
         return (
             <Tech key={tech}>
                 <CaretRight
@@ -53,7 +53,7 @@ const About = () => {
                     </Text>
                     <List>{ListItems}</List>
                 </Description>
-                <Img src={Image} />
+                <Img src={Image} alt="Emile Choghi" />
             </Grid>
         </Container>
     );

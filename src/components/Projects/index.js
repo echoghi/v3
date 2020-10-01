@@ -21,13 +21,13 @@ import { SectionNumber } from '../../assets/styles';
 const Project = ({ name, description, img, tech, url, github, index }) => {
     return (
         <Container>
-            <ProjectImage src={img} left={!!index} />
+            <ProjectImage src={img} left={!!index} alt={name} />
             <Description right={!!index}>
                 <Featured>Featured Project</Featured>
                 <Name>{name}</Name>
                 <Text>{description}</Text>
                 <TechList right={!!index}>
-                    {tech.map(str => (
+                    {tech.map((str) => (
                         <li key={str}>{str}</li>
                     ))}
                 </TechList>
