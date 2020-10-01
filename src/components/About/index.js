@@ -12,7 +12,6 @@ import {
 import config from '@config';
 import theme from '@theme';
 import { faCaretRight } from '@fortawesome/free-solid-svg-icons';
-import Image from '@images/me.jpg';
 import { SectionTitle, SectionNumber } from '@styles';
 
 const About = () => {
@@ -53,7 +52,10 @@ const About = () => {
                     </Text>
                     <List>{ListItems}</List>
                 </Description>
-                <Img src={Image} alt="Emile Choghi" />
+                <Img
+                    src="https://res.cloudinary.com/dp7726gkk/image/upload/w_400,c_scale/v1601579233/me_cxgaxy.jpg"
+                    alt="Emile Choghi"
+                />
             </Grid>
         </Container>
     );

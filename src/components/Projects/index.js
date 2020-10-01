@@ -10,8 +10,6 @@ import {
     Name
 } from './styles';
 import { Section, SectionTitle } from '@styles';
-import Doughboy from '@images/doughboy.png';
-import Corona from '@images/corona.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import theme from '@theme';
 
@@ -59,7 +57,8 @@ const Project = ({ name, description, img, tech, url, github, index }) => {
 const projects = [
     {
         name: 'Doughboy',
-        img: Doughboy,
+        img:
+            'https://res.cloudinary.com/dp7726gkk/image/upload/w_800,c_scale/v1601579233/doughboy_c499xq.png',
         tech: ['Netlify', 'TypeScript', 'React'],
         url: 'https://doughboy.io/',
         github: 'https://github.com/echoghi/doughboy',
@@ -68,7 +67,8 @@ const projects = [
     },
     {
         name: 'Covid-19 Dashboard',
-        img: Corona,
+        img:
+            'https://res.cloudinary.com/dp7726gkk/image/upload/w_800,c_scale/v1601579233/corona_dqfn6y.png',
         tech: ['Netlify', 'Gatsby', 'React'],
         url: 'https://mycovid19tracker.netlify.app/',
         github: 'https://github.com/echoghi/corona',
