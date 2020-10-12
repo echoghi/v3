@@ -11,7 +11,7 @@ export default function HitCounter() {
         // }
         // Invoke the function by making a request.
         // Update the URL to match the format of your platform.
-        fetch(`./netlify/functions/register-hit?slug=home`)
+        fetch(`/.netlify/functions/register-hit?slug=home`)
             .then((res) => res.json())
             .then((json) => {
                 if (typeof json.hits === 'number') {
