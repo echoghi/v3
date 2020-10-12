@@ -5,22 +5,24 @@ import HitCounter from '../HitCounter';
 
 const Container = styled.footer`
     margin: 0 auto;
-    height: 80px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 1rem 0;
+    padding: 1.5rem 0;
     text-align: center;
     color: ${theme.colors.white};
     font-family: ${theme.fonts.primary};
     background: #020c1b;
 `;
 
+const Attribution = styled.div`
+    display: flex;
+    justify-content: center;
+    margin: 20px 0 10px;
+`;
+
 const Footer = () => {
     return (
         <Container>
-            <span>© {new Date().getFullYear()} Emile Choghi</span>
             <HitCounter />
+            <Attribution>© {new Date().getFullYear()} Emile Choghi</Attribution>
         </Container>
     );
 };
