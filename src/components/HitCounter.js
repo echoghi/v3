@@ -6,9 +6,9 @@ export default function HitCounter() {
 
     useEffect(() => {
         // Don't count hits on localhost
-        // if (process.env.NODE_ENV !== 'production') {
-        //     return;
-        // }
+        if (process.env.NODE_ENV !== 'production') {
+            return;
+        }
         // Invoke the function by making a request.
         // Update the URL to match the format of your platform.
         fetch(`/.netlify/functions/register-hit?slug=home`)
