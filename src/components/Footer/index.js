@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import theme from '@theme';
+import HitCounter from '../HitCounter';
 
 const Container = styled.footer`
     margin: 0 auto;
@@ -16,7 +17,12 @@ const Container = styled.footer`
 `;
 
 const Footer = () => {
-    return <Container>© {new Date().getFullYear()} Emile Choghi</Container>;
+    return (
+        <Container>
+            <span>© {new Date().getFullYear()} Emile Choghi</span>
+            <HitCounter />
+        </Container>
+    );
 };
 
 export default Footer;

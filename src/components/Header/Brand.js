@@ -5,7 +5,7 @@ import theme from '@theme';
 import { faCode } from '@fortawesome/free-solid-svg-icons';
 import { NavBrand } from './styles';
 
-const Brand = props => {
+const Brand = (props) => {
     return (
         <NavBrand {...props}>
             <Link to="/#" aria-label="Navigate to Home">

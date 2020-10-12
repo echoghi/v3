@@ -84,7 +84,9 @@ const Projects = () => {
                 <SectionNumber>02. </SectionNumber>Some Things I've Built
             </SectionTitle>
             {projects.map((project, index) => {
-                return <Project {...project} index={index} />;
+                return (
+                    <Project {...project} index={index} key={project.name} />
+                );
             })}
         </Section>
     );
