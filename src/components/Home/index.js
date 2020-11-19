@@ -1,11 +1,14 @@
 import React from 'react';
+import Sparkles from '../Sparkles';
 import { OverLine, Container, Title, Button, Description } from './styles';
 
 const Home = () => {
     return (
         <Container>
             <OverLine>Hi, my name is </OverLine>
-            <Title>Emile Choghi.</Title>
+            <Sparkles>
+                <Title>Emile Choghi.</Title>
+            </Sparkles>
 
             <Description>
                 I'm a software engineer based in San Francisco, CA specializing

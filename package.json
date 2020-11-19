@@ -4,6 +4,7 @@
     "version": "0.1.0",
     "author": "Emile Choghi <emchoghi@gmail.com>",
     "dependencies": {
+        "@echoghi/hooks": "^1.5.2",
         "@fortawesome/fontawesome-svg-core": "1.2.28",
         "@fortawesome/free-solid-svg-icons": "5.13.0",
         "@fortawesome/react-fontawesome": "0.1.9",
