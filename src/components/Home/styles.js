@@ -21,6 +21,7 @@ export const Title = styled.h2`
     font-family: ${theme.fonts.primary};
     color: ${theme.colors.whiter};
     font-size: 5rem;
+    margin: 0;
 
     @media (max-width: 767px) {
         font-size: 40px;
@@ -41,6 +42,7 @@ export const Description = styled.p`
     font-size: 1.3rem;
     line-height: 1.3;
     width: 50%;
+    margin-top: 1rem;
 
     @media (max-width: 767px) {
         width: 100%;
