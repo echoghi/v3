@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
+import { sr, scrollConfig } from '@lib';
 import {
     Project as Container,
     Description,
@@ -17,8 +18,14 @@ import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
 import { SectionNumber } from '../../assets/styles';
 
 const Project = ({ name, description, img, tech, url, github, index }) => {
+    const revealContainer = useRef(null);
+
+    useEffect(() => {
+        sr.reveal(revealContainer.current, scrollConfig());
+    }, []);
+
     return (
-        <Container>
+        <Container ref={revealContainer}>
             <ProjectImage src={img} left={!!index} alt={name} />
             <Description right={!!index}>
                 <Featured>Featured Project</Featured>

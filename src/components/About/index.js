@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 import {
     Container,
     Text,
@@ -10,11 +10,18 @@ import {
     Img
 } from './styles';
 import config from '@config';
+import { sr, scrollConfig } from '@lib';
 import theme from '@theme';
 import { faCaretRight } from '@fortawesome/free-solid-svg-icons';
 import { SectionTitle, SectionNumber } from '@styles';
 
 const About = () => {
+    const revealContainer = useRef(null);
+
+    useEffect(() => {
+        sr.reveal(revealContainer.current, scrollConfig());
+    }, []);
+
     const ListItems = config.stack.map((tech) => {
         return (
             <Tech key={tech}>
@@ -29,7 +36,7 @@ const About = () => {
     });
 
     return (
-        <Container id="about">
+        <Container id="about" ref={revealContainer}>
             <SectionTitle>
                 <SectionNumber>01.</SectionNumber>About Me
             </SectionTitle>
