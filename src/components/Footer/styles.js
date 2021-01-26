@@ -22,7 +22,7 @@ export const SocialContainer = styled.ul`
     width: 40px;
     position: fixed;
     bottom: 0px;
-    left: 40px;
+    left: 48px;
     right: auto;
     z-index: 10;
     color: rgb(168, 178, 209);
