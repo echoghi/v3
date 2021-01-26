@@ -30,6 +30,7 @@ export const SocialContainer = styled.ul`
 
     li {
         margin: 20px 0;
+        cursor: pointer;
     }
 
     &:after {

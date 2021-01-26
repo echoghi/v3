@@ -19,5 +19,5 @@ module.exports = {
 
     // Social component
     github: 'https://github.com/echoghi/',
-    linkedin: 'https://www.linkedin.com/in/emile-choghi/'
+    linkedIn: 'https://www.linkedin.com/in/emile-choghi/'
 };
