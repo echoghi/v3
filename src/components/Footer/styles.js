@@ -30,7 +30,6 @@ export const SocialContainer = styled.ul`
 
     li {
         margin: 20px 0;
-        cursor: pointer;
     }
 
     &:after {
@@ -65,6 +64,7 @@ export const SocialLink = styled.a`
     position: relative;
     transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
     display: inline-block;
+    cursor: pointer;
 
     &:hover,
     &:focus {
