@@ -1,27 +1,51 @@
 import React from 'react';
-import styled from 'styled-components';
 import theme from '@theme';
+import config from '@config';
+import { faGithub, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
+
+import {
+    Container,
+    SocialContainer,
+    SocialIcon,
+    Attribution,
+    SocialLink
+} from './styles';
 import HitCounter from '../HitCounter';
-
-const Container = styled.footer`
-    margin: 0 auto;
-    padding: 1.5rem 0;
-    text-align: center;
-    color: ${theme.colors.white};
-    font-family: ${theme.fonts.primary};
-    background: #020c1b;
-`;
-
-const Attribution = styled.div`
-    display: flex;
-    justify-content: center;
-    margin: 20px 0 10px;
-`;
 
 const Footer = () => {
     return (
         <Container>
             <HitCounter />
+
+            <SocialContainer>
+                <li>
+                    <SocialLink
+                        href={config.github}
+                        target="_blank"
+                        rel="nofollow noopener noreferrer"
+                    >
+                        <SocialIcon
+                            icon={faGithub}
+                            size="lg"
+                            color={theme.colors.white}
+                        />
+                    </SocialLink>
+                </li>
+                <li>
+                    <SocialLink
+                        href={config.linkedIn}
+                        target="_blank"
+                        rel="nofollow noopener noreferrer"
+                    >
+                        <SocialIcon
+                            icon={faLinkedinIn}
+                            size="lg"
+                            color={theme.colors.white}
+                        />
+                    </SocialLink>
+                </li>
+            </SocialContainer>
+
             <Attribution>© {new Date().getFullYear()} Emile Choghi</Attribution>
         </Container>
     );

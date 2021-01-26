@@ -14,19 +14,10 @@ module.exports = {
     <strong>Emile Choghi</strong> is a software engineer based in San Francisco, CA.
   `,
     stack: ['JavaScript', 'React', 'Node.js', 'HTML & (S)CSS', 'TypeScript'],
-
-    userTwitter: '@echoghi', // Twitter Username
-    ogSiteName: '', // Facebook Site Name
     ogLanguage: 'en_US',
     googleAnalyticsID: 'UA-75282883-3',
 
-    // Manifest and Progress color
-    themeColor: '#131A34',
-    backgroundColor: '#2b2e3c',
-
     // Social component
-    twitter: 'https://twitter.com/echoghi/',
-    twitterHandle: '@echoghi',
     github: 'https://github.com/echoghi/',
-    linkedin: ''
+    linkedin: 'https://www.linkedin.com/in/emile-choghi/'
 };

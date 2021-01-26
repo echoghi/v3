@@ -1,8 +1,9 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import theme from '@theme';
 import { faCode } from '@fortawesome/free-solid-svg-icons';
+
+import theme from '@theme';
 import { NavBrand } from './styles';
 
 const Brand = (props) => {

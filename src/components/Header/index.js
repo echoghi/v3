@@ -1,16 +1,16 @@
-import React, { useState } from 'react';
-import Hamburger from './Hamburger';
-import { Nav, Links, Link, Button } from './styles';
+import React, { useState, useEffect } from 'react';
 import { useScrollData } from 'scroll-data-hook';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import Resume from '../../assets/files/Resume.pdf';
 import {
     faBriefcase,
     faHome,
     faIdBadge
 } from '@fortawesome/free-solid-svg-icons';
+
 import theme from '@theme';
-import { useEffect } from 'react';
+import Hamburger from './Hamburger';
+import { Nav, Links, Link, Button } from './styles';
+import Resume from '../../assets/files/Resume.pdf';
 import Brand from './Brand';
 
 const Header = () => {
@@ -20,7 +20,7 @@ const Header = () => {
     const closeMenu = () => handleMenu(false);
     const toggleMenu = () => handleMenu(!open);
 
-    const handleActivePath = path => {};
+    const handleActivePath = (path) => {};
 
     useEffect(() => {
         if (direction.y) {

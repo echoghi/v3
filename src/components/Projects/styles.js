@@ -19,9 +19,13 @@ export const Button = styled(Box)`
     margin: 1rem auto;
 `;
 
+export const ProjectLink = styled.a`
+    padding: 0 10px;
+`;
+
 export const ProjectImage = styled.img`
     grid-row: 1 / -1;
-    grid-column: ${props => (props.left ? '1 / 8' : '6 / 13')};
+    grid-column: ${(props) => (props.left ? '1 / 8' : '6 / 13')};
     border-radius: 4px;
     transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
     box-shadow: rgba(2, 12, 27, 0.7) 0px 10px 30px -15px;
@@ -37,8 +41,8 @@ export const ProjectImage = styled.img`
 
 export const Description = styled.div`
     position: relative;
-    grid-column: ${props => (props.right ? '7 / 13' : '1 / 7')};
-    text-align: ${props => (props.right ? 'right' : 'left')};
+    grid-column: ${(props) => (props.right ? '7 / 13' : '1 / 7')};
+    text-align: ${(props) => (props.right ? 'right' : 'left')};
     grid-row: 1 / -1;
 
     @media (max-width: 767px) {
@@ -51,7 +55,7 @@ export const Description = styled.div`
 export const TechList = styled.ul`
     display: flex;
     margin: 0;
-    justify-content: ${props => (props.right ? 'flex-end' : 'flex-start')};
+    justify-content: ${(props) => (props.right ? 'flex-end' : 'flex-start')};
 
     li {
         font-size: 12px;

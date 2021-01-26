@@ -1,5 +1,9 @@
 import React, { useRef, useEffect } from 'react';
-import { sr, scrollConfig } from '@lib';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
+
+import sr, { scrollConfig } from '@lib/sr';
 import {
     Project as Container,
     Description,
@@ -8,14 +12,11 @@ import {
     Featured,
     TechList,
     Icons,
-    Name
+    Name,
+    ProjectLink
 } from './styles';
-import { Section, SectionTitle } from '@styles';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { Section, SectionTitle, SectionNumber } from '@styles';
 import theme from '@theme';
-
-import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
-import { SectionNumber } from '../../assets/styles';
 
 const Project = ({ name, description, img, tech, url, github, index }) => {
     const revealContainer = useRef(null);
@@ -37,14 +38,18 @@ const Project = ({ name, description, img, tech, url, github, index }) => {
                     ))}
                 </TechList>
                 <Icons>
-                    {/* <a href={github}>
+                    <ProjectLink
+                        href={github}
+                        target="_blank"
+                        rel="nofollow noopener noreferrer"
+                    >
                         <FontAwesomeIcon
-                            icon={faGithubSquare}
+                            icon={faGithub}
                             size="lg"
                             color={theme.colors.white}
                         />
-                    </a> */}
-                    <a
+                    </ProjectLink>
+                    <ProjectLink
                         href={url}
                         target="_blank"
                         rel="nofollow noopener noreferrer"
@@ -54,7 +59,7 @@ const Project = ({ name, description, img, tech, url, github, index }) => {
                             size="lg"
                             color={theme.colors.white}
                         />
-                    </a>
+                    </ProjectLink>
                 </Icons>
             </Description>
         </Container>

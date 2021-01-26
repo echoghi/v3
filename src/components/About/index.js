@@ -1,4 +1,10 @@
 import React, { useRef, useEffect } from 'react';
+import { faCaretRight } from '@fortawesome/free-solid-svg-icons';
+
+import config from '@config';
+import sr, { scrollConfig } from '@lib/sr';
+import theme from '@theme';
+import { SectionTitle, SectionNumber } from '@styles';
 import {
     Container,
     Text,
@@ -9,11 +15,6 @@ import {
     List,
     Img
 } from './styles';
-import config from '@config';
-import { sr, scrollConfig } from '@lib';
-import theme from '@theme';
-import { faCaretRight } from '@fortawesome/free-solid-svg-icons';
-import { SectionTitle, SectionNumber } from '@styles';
 
 const About = () => {
     const revealContainer = useRef(null);

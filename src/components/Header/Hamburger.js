@@ -1,4 +1,5 @@
 import React from 'react';
+
 import { Container, Line } from './styles';
 
 const Hamburger = ({ open, ...props }) => (

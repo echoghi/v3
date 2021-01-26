@@ -1,5 +1,6 @@
 import React, { useRef, useEffect } from 'react';
-import { sr, scrollConfig } from '@lib';
+
+import sr, { scrollConfig } from '@lib/sr';
 import { Container, Text, Heading, Button } from './styles';
 import { SectionNumber, SectionTitle } from '@styles';
 
