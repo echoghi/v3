@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export const Container = styled.footer`
     margin: 0 auto;
@@ -26,10 +25,6 @@ export const SocialContainer = styled.ul`
     color: rgb(168, 178, 209);
     list-style: none;
 
-    li {
-        margin: 20px 0;
-    }
-
     &:after {
         content: '';
         display: block;
@@ -48,13 +43,17 @@ export const SocialContainer = styled.ul`
         left: auto;
         right: auto;
 
-        li {
-            margin: 0 15px;
-        }
-
         &:after {
             display: none;
         }
+    }
+`;
+
+export const SocialListItem = styled.li`
+    margin: 20px 0;
+
+    @media (max-width: 1023px) {
+        margin: 0 15px;
     }
 `;
 
@@ -73,5 +72,3 @@ export const SocialLink = styled.a`
         }
     }
 `;
-
-export const SocialIcon = styled(FontAwesomeIcon)``;
