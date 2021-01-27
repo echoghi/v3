@@ -84,7 +84,11 @@ export const NavBrand = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0 1.45rem;
+    padding: 0 2rem;
+
+    @media (max-width: 767px) {
+        padding: 0 1.45rem;
+    }
 
     a {
         color: var(--white);

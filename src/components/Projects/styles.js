@@ -79,6 +79,8 @@ export const Icons = styled.div`
 export const Name = styled.h5`
     font-size: 28px;
     font-family: var(--font);
+    margin: 0;
+    margin-bottom: 1.45rem;
 
     @media (max-width: 767px) {
         font-size: 22px;
