@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import theme from '@theme';
+
 import { Section, Button as Box } from '@styles';
 
 export const Container = styled(Section)`
@@ -8,7 +8,7 @@ export const Container = styled(Section)`
 
 export const Text = styled.p`
     font-size: 1.3rem;
-    color: ${theme.colors.white};
+    color: var(--white);
     width: 30rem;
     margin: 3rem auto;
     width: 80%;

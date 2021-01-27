@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import theme from '@theme';
+
 import { Button as Box } from '@styles';
 
 export const Project = styled.div`
@@ -35,7 +35,7 @@ export const ProjectImage = styled.img`
     @media (max-width: 767px) {
         grid-column: 1 / -1;
 
-        background-color: ${theme.colors.teal};
+        background-color: var(--teal);
     }
 `;
 
@@ -78,7 +78,7 @@ export const Icons = styled.div`
 
 export const Name = styled.h5`
     font-size: 28px;
-    font-family: ${theme.fonts.primary};
+    font-family: var(--font);
 
     @media (max-width: 767px) {
         font-size: 22px;
@@ -87,9 +87,9 @@ export const Name = styled.h5`
 `;
 
 export const Featured = styled.h4`
-    font-family: ${theme.fonts.primary};
+    font-family: var(--font);
     font-size: 13px;
-    color: ${theme.colors.teal};
+    color: var(--teal);
     margin-bottom: 0.5rem;
 `;
 

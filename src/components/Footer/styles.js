@@ -1,14 +1,12 @@
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-import theme from '@theme';
-
 export const Container = styled.footer`
     margin: 0 auto;
     padding: 1.5rem 0;
     text-align: center;
-    color: ${theme.colors.white};
-    font-family: ${theme.fonts.primary};
+    color: var(--white);
+    font-family: var(--font);
 `;
 
 export const Attribution = styled.div`
@@ -38,7 +36,7 @@ export const SocialContainer = styled.ul`
         width: 1px;
         height: 90px;
         margin: 0px auto;
-        background: ${theme.colors.white};
+        background: var(--white);
     }
 
     @media (max-width: 1023px) {

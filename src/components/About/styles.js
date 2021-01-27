@@ -1,9 +1,5 @@
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import theme from '@theme';
-import { Section } from '@styles';
-
-export const Container = styled(Section)``;
 
 export const Text = styled.p`
     font-size: 1.3rem;
@@ -41,7 +37,7 @@ export const CaretRight = styled(FontAwesomeIcon)`
 
 export const Tech = styled.li`
     font-size: 14px;
-    color: ${theme.colors.white};
+    color: var(--white);
     padding: 0.25rem 0;
     list-style: none;
     margin: 0;

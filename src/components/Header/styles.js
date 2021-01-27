@@ -1,21 +1,21 @@
 import styled from 'styled-components';
 import { Link as NavLink } from 'gatsby';
-import theme from '@theme';
+
 import { Button as Box } from '@styles';
 
 export const Nav = styled.header`
-    background: ${theme.colors.darkBlue};
-    box-shadow: ${props =>
+    background: var(--dark-blue);
+    box-shadow: ${(props) =>
         props.scrollDirection === 'up' && props.position.y !== 0
-            ? theme.boxShadow
+            ? 'var(--box-shadow)'
             : 'none'};
     position: fixed;
     top: 0;
     transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
     transform: translateY(
-        ${props => (props.scrollDirection === 'down' ? `-70px` : '0px')}
+        ${(props) => (props.scrollDirection === 'down' ? `-70px` : '0px')}
     );
-    height: ${props =>
+    height: ${(props) =>
         props.scrollDirection === 'none' ||
         (props.scrollDirection === 'up' && props.position.y === 0)
             ? '100px'
@@ -24,7 +24,7 @@ export const Nav = styled.header`
     justify-content: space-between;
     width: 100%;
     z-index: 99;
-    font-family: ${theme.fonts.primary};
+    font-family: var(--font);
     padding: 0 1rem;
 
     @media (max-width: 1023px) {
@@ -47,20 +47,20 @@ export const Container = styled.div`
 
     div {
         &:first-child {
-            top: ${props => (props.open ? '10.5px' : null)};
-            transform: ${props => (props.open ? 'rotate(315deg)' : 'none')};
+            top: ${(props) => (props.open ? '10.5px' : null)};
+            transform: ${(props) => (props.open ? 'rotate(315deg)' : 'none')};
         }
 
         &:nth-child(2) {
-            display: ${props => (props.open ? 'none' : 'block')};
+            display: ${(props) => (props.open ? 'none' : 'block')};
             width: 65%;
         }
 
         &:last-child {
-            top: ${props => (props.open ? '10.5px' : null)};
-            transform: ${props =>
+            top: ${(props) => (props.open ? '10.5px' : null)};
+            transform: ${(props) =>
                 props.open ? 'rotate(-315deg) translateY(-14px)' : 'none'};
-            right: ${props => (props.open ? '10px' : null)};
+            right: ${(props) => (props.open ? '10px' : null)};
         }
     }
 `;
@@ -69,14 +69,14 @@ export const Line = styled.div`
     position: relative;
     margin: 7px 0;
     height: 3px;
-    background: ${theme.colors.teal};
+    background: var(--teal);
     border-radius: 5px;
     transition: all 300ms ease-out;
 `;
 
 export const Number = styled.span`
     padding: 0 1rem;
-    color: ${theme.colors.teal};
+    color: var(--teal);
     transition: all 300ms ease-out;
 `;
 
@@ -87,7 +87,7 @@ export const NavBrand = styled.div`
     padding: 0 2rem;
 
     a {
-        color: ${theme.colors.white};
+        color: var(--white);
     }
 `;
 
@@ -118,9 +118,8 @@ export const Link = styled(NavLink)`
     user-select: none;
     outline: none;
     line-height: 1;
-    color: ${props =>
-        !!props.active ? theme.colors.teal : theme.colors.white};
-    font-family: ${theme.fonts.primary};
+    color: ${(props) => (!!props.active ? 'var(--teal)' : 'var(--white)')};
+    font-family: var(--font);
 
     span {
         text-transform: none;
@@ -131,7 +130,7 @@ export const Link = styled(NavLink)`
     }
 
     &:hover {
-        color: ${theme.colors.teal};
+        color: var(--teal);
     }
 
     @media (max-width: 767px) {
@@ -163,7 +162,7 @@ export const ExternalLink = styled.a`
     user-select: none;
     outline: none;
     line-height: 1;
-    color: ${theme.colors.white};
+    color: var(--white);
 
     span {
         text-transform: none;
@@ -174,7 +173,7 @@ export const ExternalLink = styled.a`
     }
 
     &:hover {
-        color: ${theme.colors.teal};
+        color: var(--teal);
     }
 
     @media (max-width: 767px) {
@@ -216,9 +215,9 @@ export const Links = styled.ul`
         margin: 0;
         -webkit-tap-highlight-color: transparent;
         box-shadow: -2px 2px 5px rgba(0, 0, 0, 0.1);
-        background: ${theme.colors.lightBlue};
+        background: var(--light-blue);
         text-align: center;
-        transform: translateX(${props => (props.open ? '0px' : '76vw')});
+        transform: translateX(${(props) => (props.open ? '0px' : '76vw')});
         transition: transform 0.2s ease;
         transform-origin: right;
     }

@@ -4,17 +4,8 @@ import { faCaretRight } from '@fortawesome/free-solid-svg-icons';
 import config from '@config';
 import sr, { scrollConfig } from '@lib/sr';
 import theme from '@theme';
-import { SectionTitle, SectionNumber } from '@styles';
-import {
-    Container,
-    Text,
-    Grid,
-    Description,
-    Tech,
-    CaretRight,
-    List,
-    Img
-} from './styles';
+import { Section, SectionTitle, SectionNumber } from '@styles';
+import { Text, Grid, Description, Tech, CaretRight, List, Img } from './styles';
 
 const About = () => {
     const revealContainer = useRef(null);
@@ -37,7 +28,7 @@ const About = () => {
     });
 
     return (
-        <Container id="about" ref={revealContainer}>
+        <Section id="about" ref={revealContainer}>
             <SectionTitle>
                 <SectionNumber>01.</SectionNumber>About Me
             </SectionTitle>
@@ -65,7 +56,7 @@ const About = () => {
                     alt="Emile Choghi"
                 />
             </Grid>
-        </Container>
+        </Section>
     );
 };
 
