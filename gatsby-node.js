@@ -7,6 +7,7 @@
 const path = require('path');
 
 exports.onCreateWebpackConfig = ({ actions, stage, loaders }) => {
+    // Set up a fake loader for the scrollreveal module which kept throwing errors in SSR despite the "typeof window" check
     if (stage === 'build-html') {
         actions.setWebpackConfig({
             module: {
