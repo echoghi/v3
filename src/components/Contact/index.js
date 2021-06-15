@@ -18,10 +18,9 @@ const Contact = () => {
             </SectionTitle>
             <Heading>Get In Touch</Heading>
             <Text>
-                I'm currently in the process of launching a web development
-                agency and am accepting new clients. So whether you have a need
-                for a simple website or complex web application, feel free to
-                drop a line!
+                I'm currently back on the market and open to new roles and
+                experiences. So whether you have a need for a simple website or
+                complex web application, feel free to drop a line!
             </Text>
             <Button href="mailto:emchoghi@gmail.com">Say Hello</Button>
         </Container>
